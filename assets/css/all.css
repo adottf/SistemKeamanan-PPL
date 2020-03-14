@@ -1,0 +1,24 @@
+ul{
+    width: auto;
+    float: right;
+    margin-top:10px;
+    word-spacing: 30px;
+}
+li{
+    display: inline-block;
+    padding: 15px 10 px; 
+    margin:100px;
+    
+}
+a{
+    text-align: center;
+    color: rgb(17, 16, 17);
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    
+}
+a:hover{
+    color: #380438;
+    transation: 0,5s;
+}
