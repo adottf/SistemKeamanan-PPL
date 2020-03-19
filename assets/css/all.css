@@ -22,3 +22,43 @@ a:hover{
     color: #380438;
     transation: 0,5s;
 }
+
+.row{
+    height:300px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    color: blue;
+    justify-content: space-between;
+    align-items: flex-end;
+   
+}
+.power{
+    width:70px;
+    height: 70px;
+    float:left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    clear: both;
+    position: relative;
+    margin: 10px;
+}
+.Setting{
+    width:70px;
+    height: 70px;
+    float:center;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    position: relative;
+  
+}img.set{
+    width:70px;
+    height: 70px;
+    float:center;
+}
+
+
+
+
