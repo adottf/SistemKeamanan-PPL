@@ -55,6 +55,11 @@
                                                         class="hyperlink-7" href="<?php echo base_url()?>setting">Setting</a>
                                                 </h6>
                                             </li>
+                                            <li>
+                                                <h6 class="font-weight-normal uppercase letter-spacing-2px"><a
+                                                        class="hyperlink-7" href="<?php echo base_url()?>home/logout">logout</a>
+                                                </h6>
+                                            </li>
 											</ul>
 										</div>
 										<div class="col-12 col-md-6">

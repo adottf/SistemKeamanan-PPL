@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+$username = $this->session->userdata('Username');
+if(!empty($username)){
+	header("location:home");
+}
+
+?>
 <html lang="en">
 
 <head>
