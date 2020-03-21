@@ -106,37 +106,31 @@
             <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="col-md-5">
-                        <form action="" method="post" class="bg-white p-md-5 p-4 mb-5 border"
-                            onSubmit="return validatePassword()">
+                        <form action="<?php echo base_url() ?>setting/gantipass" method="post" class="bg-white p-md-5 p-4 mb-5 border" onSubmit="return validatePassword()">
                             <h2 class="font-weight-bold" align="center">Ubah Password</h2><br>
                             <hr width="100%" align="center">
-                            <div class="alert alert-danger" id="log_fail" role="alert" style="display: none;">
-                                email atau password anda salah!
-                            </div>
+                            <div align="center"><?php echo $this->session->flashdata('error'); ?></div>
+                           
                             <div class="form-group">
                                 <label class="text-black font-weight-bold" for="email">Password Lama</label>
-                                <input type="password" name="currentPassword" class="txtField"
-                                    placeholder="Masukkan password lama" /><span id="currentPassword"
-                                    class="required"></span>
+                                <input type="password" name="oldpass" id="oldpass" class="txtField" placeholder="Masukkan password lama" value="<?php echo set_value('oldpass');?>"/>
                             </div>
                             <div class="form-group">
                                 <label class="text-black font-weight-bold" for="email">Password Baru</label>
-                                <input type="password" name="currentPassword" class="txtField"
-                                    placeholder="Masukkan password baru" /><span id="currentPassword"
-                                    class="required"></span>
+                                <input type="password" name="newpass" id="newpass" class="txtField"
+                                    placeholder="Masukkan password baru" value="<?php echo set_value('newpass');?>" />
                             </div>
                             <div class="form-group">
                                 <label class="text-black font-weight-bold" for="password">Konfirmasi Password</label>
-                                <input type="password" name="currentPassword" class="txtField"
-                                    placeholder="Konfirmasi password baru" /><span id="currentPassword"
-                                    class="required"></span>
+                                <input type="password" name="validpass" id="validpass" class="txtField"
+                                    placeholder="Konfirmasi password baru" value="<?php echo set_value('validpass');?>" />
                             </div>
                             <div class="form-group" align="center">
                                 <td colspan="2">
-                                    <a class="button button-lg button-lg button-reveal-right-dark button-rounded button-border-1px margin-top-30 scrolldown"
-                                        href="HomeSet.html">Batal &nbsp; <i class="ti-arrow-right"></i></a>
-                                    <a class="button button-lg button-lg button-reveal-right-dark button-rounded button-border-1px margin-top-30 scrolldown"
-                                        href="HomeSet.html">Simpan &nbsp; <i class="ti-arrow-right"></i></a>
+                                    <a href="<?php echo base_url() ?>home"><button class="button button-lg button-lg button-reveal-right-dark button-rounded button-border-1px margin-top-30 scrolldown">
+                                        Batal &nbsp; <i class="ti-arrow-right"></i></button></a>&nbsp;&nbsp;
+                                        
+                                    <button type="submit" class="button button-lg button-lg button-reveal-right-dark button-rounded button-border-1px margin-top-30 scrolldown" >Simpan &nbsp; <i class="ti-arrow-right"></i></button>
                                 </td>
                             </div>
                         </form>
@@ -150,30 +144,30 @@
     <!-- Validaton -->
     <script>
         function validatePassword() {
-            var currentPassword, newPassword, confirmPassword, output = true;
+            var oldpass, newpass, validpass, output = true;
 
-            currentPassword = document.frmChange.currentPassword;
-            newPassword = document.frmChange.newPassword;
-            confirmPassword = document.frmChange.confirmPassword;
+            oldpass = document.frmChange.oldpass;
+            newpass = document.frmChange.newpass;
+            validpass = document.frmChange.validpass;
 
-            if (!currentPassword.value) {
-                currentPassword.focus();
-                document.getElementById("currentPassword").innerHTML = "required";
+            if (!oldpass.value) {
+                oldpass.focus();
+                document.getElementById("oldpass").innerHTML = "required";
                 output = false;
-            } else if (!newPassword.value) {
-                newPassword.focus();
-                document.getElementById("newPassword").innerHTML = "required";
+            } else if (!newpass.value) {
+                newpass.focus();
+                document.getElementById("newpass").innerHTML = "required";
                 output = false;
-            } else if (!confirmPassword.value) {
-                confirmPassword.focus();
-                document.getElementById("confirmPassword").innerHTML = "required";
+            } else if (!validpass.value) {
+                validpass.focus();
+                document.getElementById("validpass").innerHTML = "required";
                 output = false;
             }
-            if (newPassword.value != confirmPassword.value) {
-                newPassword.value = "";
-                confirmPassword.value = "";
-                newPassword.focus();
-                document.getElementById("confirmPassword").innerHTML = "not same";
+            if (newpass.value != validpass.value) {
+                newpass.value = "";
+                validpass.value = "";
+                newpass.focus();
+                document.getElementById("validpass").innerHTML = "not same";
                 output = false;
             }
             return output;

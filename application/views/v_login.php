@@ -109,7 +109,11 @@ if(!empty($username)){
 					<div class="col-md-5">
 						<form action="<?php echo base_url() ?>login/getlogin" method="post"  class="bg-white p-md-5 p-4 mb-5 border">
 							<h2 class="font-weight-bold" align="center">Login</h2>
-							<?php echo $this->session->flashdata('msg'); ?>
+							
+							<div align="center">
+								<?php echo $this->session->flashdata('error'); ?>
+								<?php echo $this->session->flashdata('msg'); ?>
+							</div>
 							<br>
 							<hr width="100%" align="center">
 							<div class="alert alert-danger" id="log_fail" role="alert" style="display: none;">
