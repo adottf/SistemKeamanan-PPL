@@ -58,6 +58,10 @@
                                             </li>
                                             <li>
                                                 <h6 class="font-weight-normal uppercase letter-spacing-2px"><a
+                                                        class="hyperlink-7" href="<?php echo base_url()?>Arduino">Arduino</a></h6>
+                                            </li>
+                                            <li>
+                                                <h6 class="font-weight-normal uppercase letter-spacing-2px"><a
                                                         class="hyperlink-7" href="<?php echo base_url() ?>setting">Setting</a>
                                                 </h6>
                                             </li>

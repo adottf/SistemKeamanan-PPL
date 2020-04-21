@@ -52,10 +52,6 @@
                                             </li>
                                             <li>
                                                 <h6 class="font-weight-normal uppercase letter-spacing-2px"><a
-                                                        class="hyperlink-7" href="<?php echo base_url()?>Arduino">Arduino</a></h6>
-                                            </li>
-                                            <li>
-                                                <h6 class="font-weight-normal uppercase letter-spacing-2px"><a
                                                         class="hyperlink-7" href="<?php echo base_url()?>setting">Setting</a>
                                                 </h6>
                                             </li>
@@ -104,10 +100,12 @@
 						<div class="col-md-12">
 							<form action="" method="get" class="bg-white p-md-5 p-4 mb-5 border" >
               
-                			  <label class="text-black font-weight-bold text-center" >Data Log</label>
+                			  <label class="text-black font-weight-bold text-center" >Arduino</label>
                    			<textarea name="data_log" id="data_log" class="form-control " cols="30" rows="8"></textarea>
 
-                 	 <button type="submit" value="Save" class="btn btn-primary button-radius col-lg-3 text-white font-weight-bold">Save</button>
+                 	 <button type="button" value="button" class="btn btn-primary button-radius col-lg-3 text-white font-weight-bold">Button1</button>
+                 	 <button type="button" value="button" class="btn btn-primary button-radius col-lg-3 text-white font-weight-bold">Button2</button>
+                 	 <button type="button" value="button" class="btn btn-primary button-radius col-lg-3 text-white font-weight-bold">Button3</button>
             				</form>
 						
 						</div>
