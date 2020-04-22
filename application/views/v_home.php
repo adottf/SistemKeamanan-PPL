@@ -102,14 +102,33 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
+							<!--
 							<form action="" method="get" class="bg-white p-md-5 p-4 mb-5 border" >
-              
-                			  <label class="text-black font-weight-bold text-center" >Data Log</label>
+							<label class="text-black font-weight-bold text-center" >Data Log</label>
                    			<textarea name="data_log" id="data_log" class="form-control " cols="30" rows="8"></textarea>
-
-                 	 <button type="submit" value="Save" class="btn btn-primary button-radius col-lg-3 text-white font-weight-bold">Save</button>
+                 	 		<button type="submit" value="Save" class="btn btn-primary button-radius col-lg-3 text-white font-weight-bold">Save</button>
             				</form>
-						
+							-->
+							<table class="table">
+								<thead class="thead-light">
+									<tr class="d-flex">
+										<th scope="col" class="col-3">Waktu</th>
+										<th scope="col" class="col-9">Log</th>
+									</tr>
+								</thead>
+								<tbody class="bg-white">
+									<?php
+										if(isset($data)){
+											foreach ($data as $log){
+												echo "<tr class='d-flex'>";
+													echo "<td class='col-3'>".$log['waktu']."</th>";
+													echo "<td class='col-9'>".$log['kondisi']."</td>";
+												echo "</tr>";
+											}
+										}
+									?>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
